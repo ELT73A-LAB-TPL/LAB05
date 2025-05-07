@@ -5,6 +5,13 @@ setlocal EnableDelayedExpansion
 set "DEFAULT_NAME=STM32F411CEUx"
 set "DEFAULT_SCRIPT=BaseScript.txt"
 set "DEFAULT_FLAG=N"
+set "DEFAULT_MCU=STM32F411C(C-E)Ux"
+
+:: Parse Arguments
+if "%1"=="--help" goto :help
+if "%1"=="-h" goto :help
+if "%1"=="/?" goto :help
+if "%1"=="-i" goto :interactive
 
 :: Check if arguments are passed, otherwise use defaults
 if "%~1"=="" (
@@ -136,3 +143,25 @@ if %ERRORLEVEL% neq 0 (
 echo STM32CubeMX executed successfully.
 pause
 endlocal
+
+:: Run STM32CubeMX interactively if "-i" is provided
+:interactive
+echo Running STM32CubeMX in interactive mode...
+"%STM32CubeMX_PATH%\jre\bin\java" -jar "%STM32CubeMX_PATH%\STM32CubeMX.exe" -i
+exit /b
+
+
+:help
+echo Usage: LoadMX [--help, -h, /?, -i]
+echo Options:
+echo    --help, -h, /?   Show this help message
+echo    -i   	    Run STM32CubeMX interactively
+echo Example: LoadMX -i
+echo.
+echo Usage: LoadMX [ProjectName] [ScriptFile] [CodeFlag]
+echo Options:
+echo    ProjectName      Set the project name (default: STM32F411CEUx)
+echo    ScriptFile       Set the script file name (default: BaseScript.txt)
+echo    CodeFlag         Generate code? (default: N)
+echo Example: LoadMX MyProject MyScript.txt Y
+exit /b
