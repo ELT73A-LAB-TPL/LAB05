@@ -1,7 +1,10 @@
 # LAB05 template for ELT73A course 
 
 ## LAB steps
-
+Generate code from last LAB
+```bash
+LoadMX TIM2EXTI0 BaseScript.txt Y
+```
 
 ## Running STM32CubeMX in command-line mode
 - https://www.st.com/resource/en/user_manual/um1718-stm32cubemx-for-stm32-configuration-and-initialization-c-code-generation-stmicroelectronics.pdf
