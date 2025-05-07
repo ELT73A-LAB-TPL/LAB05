@@ -1,16 +1,7 @@
-# LAB04 template for ELT73A course 
+# LAB05 template for ELT73A course 
 
-## MiniF4-STM32F401CEU6
-- https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1
-  
-## STM32CubeF4 MCU Firmware Package
-- https://github.com/STMicroelectronics/STM32CubeF4
-- https://github.com/STMicroelectronics/STM32Cube_MCU_Overall_Offer
+## LAB steps
 
-## STM32 Development Tools
-- https://www.st.com/en/development-tools/stm32cubemx.html
-- https://www.st.com/en/development-tools/stm32cubeclt.html
-- https://www.st.com/en/development-tools/stm32cubeprog.html
 
 ## Running STM32CubeMX in command-line mode
 - https://www.st.com/resource/en/user_manual/um1718-stm32cubemx-for-stm32-configuration-and-initialization-c-code-generation-stmicroelectronics.pdf
@@ -35,17 +26,17 @@ To generate a script
 export script ScriptToLoad.txt
 ```
 
-### Open STM32CubeMX
-Opens STM32CubeMX and loads STM32F411CEUx
-```bash
-OpenMX
-```
-Opens STM32CubeMX and loads provided MCU
-```bash
-OpenMX STM32F411CEUx
-```
 
 ### Load STM32CubeMX Script
+
+Call for Help (--help, -h, /?)
+```bash
+LoadMX --help
+```
+Run STM32CubeMX interactively
+```bash
+LoadMX -i
+```
 Opens STM32CubeMX and loads default values for Project Name, Script and Code Generation (STM32F411CEUx, BaseScript.txt and N)
 ```bash
 LoadMX
@@ -59,8 +50,22 @@ Opens STM32CubeMX with provided Project Name and Script Name and loads default v
 ```bash
 LoadMX ProjectName ScriptName.txt
 ```
-Opens STM32CubeMX with provided Project Name, Script Name and generate code flag
+Opens STM32CubeMX with provided Project Name, Script Name and generate code
 ```bash
 LoadMX ProjectName ScriptName.txt Y
-``` 
+```
+
+## References
+### MiniF4-STM32F401CEU6
+- https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1
+  
+### STM32CubeF4 MCU Firmware Package
+- https://github.com/STMicroelectronics/STM32CubeF4
+- https://github.com/STMicroelectronics/STM32Cube_MCU_Overall_Offer
+
+### STM32 Development Tools
+- https://www.st.com/en/development-tools/stm32cubemx.html
+- https://www.st.com/en/development-tools/stm32cubeclt.html
+- https://www.st.com/en/development-tools/stm32cubeprog.html
+
 
