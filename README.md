@@ -63,6 +63,9 @@ LoadMX ProjectName ScriptName.txt Y
 ```
 
 ## References
+### STM32 Arm® Cortex® MCU wiki
+- https://wiki.st.com/stm32mcu/
+  
 ### MiniF4-STM32F401CEU6
 - https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1
   
