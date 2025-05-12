@@ -10,6 +10,9 @@ It's recommended to verify that the your Git installation is not performing any 
 ```bash
 git config --global core.autocrlf false
 ```
+```bash
+git config list --show-origin
+```
 How to commit updates
 ```bash
 cd LAB05
