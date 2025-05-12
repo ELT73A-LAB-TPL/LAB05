@@ -3,11 +3,29 @@
 ## LAB steps
 Generate code from last LAB
 ```bash
-LoadMX TIM2EXTI0 BaseScript.txt Y
+LoadMX TIM2EXTI0 TIM2EXTI0.txt Y
 ```
 Import into VScode
 ```bash
 LoadCode TIM2EXTI0
+```
+
+Generate code with ADC1
+```bash
+LoadMX TIM2EXTI0ADC1 TIM2EXTI0ADC1.txt Y
+```
+Import into VScode
+```bash
+LoadCode TIM2EXTI0ADC1
+```
+
+Generate code with ADC1 and PWM
+```bash
+LoadMX TIM2EXTI0ADC1PWM TIM2EXTI0ADC1PWM.txt Y
+```
+Import into VScode
+```bash
+LoadCode TIM2EXTI0ADC1PWM
 ```
 
 ## Running STM32CubeMX in command-line mode
